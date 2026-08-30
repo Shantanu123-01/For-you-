@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For You ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;color:#fff;background:radial-gradient(circle at top,#35104d,#080312 65%);min-height:100vh;overflow-x:hidden}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}.heart{position:absolute;color:#ff4f9a;font-size:24px;animation:float 8s linear infinite;opacity:.7}
+@keyframes float{0%{transform:translateY(105vh) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-10vh) rotate(360deg);opacity:0}}
+.wrap{max-width:850px;margin:auto;padding:45px 20px 70px}.hero{text-align:center;padding:35px 15px}
+h1{font-size:clamp(48px,10vw,90px);margin:0;color:#ff72b5;text-shadow:0 0 25px #ff197e}
+.subtitle{font-size:20px;color:#ffd9e9}.card{background:rgba(16,8,28,.82);border:1px solid #ff3f91;border-radius:22px;padding:28px;margin:22px 0;box-shadow:0 0 25px rgba(255,35,130,.15)}
+h2{color:#ff72b5}.code{font-family:monospace;font-size:18px;line-height:1.8;color:#f7d9e9}.pink{color:#ff62aa}.letter{font-size:18px;line-height:1.8}
+button{border:0;border-radius:999px;padding:16px 25px;margin:8px;font-size:16px;font-weight:bold;cursor:pointer;transition:.2s}
+.yes{background:#ff328b;color:white;box-shadow:0 0 20px #ff328b}.no{background:#24182e;color:#ffd4e7;border:1px solid #ff4d9c}
+button:hover{transform:scale(1.05)}#reply{display:none;text-align:center;color:#ff8cc2;font-size:20px;margin-top:20px}
+footer{text-align:center;color:#caa9bd;margin-top:35px}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+<div class="wrap">
+<section class="hero">
+<h1>I'm Sorry ❤️</h1>
+<p class="subtitle">I made this little website just for you...</p>
+</section>
+
+<div class="card">
+<h2>💻 Our Relationship.exe</h2>
+<div class="code">
+<span class="pink">if</span> (you.areAngry == true) {<br>
+&nbsp;&nbsp;say("I'm really sorry 🥺");<br>
+&nbsp;&nbsp;promise("I'll do better ❤️");<br>
+}<br><br>
+<span class="pink">while</span> (myHeart.beats) {<br>
+&nbsp;&nbsp;love(you);<br>
+}
+</div>
+</div>
+
+<div class="card">
+<h2>💌 A Small Message For You</h2>
+<div class="letter">
+Hey Baby,<br><br>
+I know I made mistakes, and I'm genuinely sorry for hurting you. 🥺
+I never wanted to make you feel bad or make you think that I don't care.
+<br><br>
+You are very special to me. I don't want to lose what we have because of my mistakes.
+I can't promise I'll never make a mistake again, but I can promise that I'll learn, listen,
+and make a real effort to become better for you. ❤️
+<br><br>
+I don't want to force you to forgive me. I just want one chance to show you that
+I truly mean this.
+<br><br>
+<strong>I love you. ❤️</strong>
+</div>
+</div>
+
+<div class="card">
+<h2>❤️ Why You Matter To Me</h2>
+<div class="letter">
+✨ Your smile makes my day.<br>
+💗 You make ordinary moments feel special.<br>
+🌙 Talking to you feels like home.<br>
+♾️ You are someone I don't want to give up on.<br>
+🥺 And yes... I miss you a lot.
+</div>
+</div>
+
+<div class="card" style="text-align:center">
+<h2>Will you give me one more chance? 🥺</h2>
+<button class="yes" onclick="forgive()">Yes, I Forgive You ❤️</button>
+<button class="no" onclick="angry()">Still Angry 😠</button>
+<div id="reply"></div>
+</div>
+
+<footer>No matter what happens, I'll always wish the best for you. ❤️</footer>
+</div>
+
+<script>
+const box=document.getElementById('hearts');
+for(let i=0;i<24;i++){
+ const h=document.createElement('div'); h.className='heart'; h.innerHTML='♥';
+ h.style.left=Math.random()*100+'%'; h.style.animationDelay=Math.random()*8+'s';
+ h.style.fontSize=(14+Math.random()*25)+'px'; box.appendChild(h);
+}
+function forgive(){document.getElementById('reply').style.display='block';document.getElementById('reply').innerHTML='🥹❤️ Thank you... I promise I will value you and us.'}
+function angry(){document.getElementById('reply').style.display='block';document.getElementById('reply').innerHTML='It’s okay. Take your time. I’ll respect your feelings. ❤️'}
+</script>
+</body>
+</html>
